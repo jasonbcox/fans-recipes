@@ -8,8 +8,18 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <script>window.__INITIAL_STATE__ = {{{initialState}}}</script>
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    var config = {
+      apiKey: "AIzaSyBcQkvD_ouRaW-9zyz6BijpKGxuOFhXJ5E",
+      databaseURL: "https://fans-of-fan-5eeb8.firebaseio.com",
+    };
+    firebase.initializeApp(config);
+    var database = firebase.database();
+  </script>
 </head>
-<body style="background-color: #eee; display: flex; justify-content: center; margin: 0;">
+<body style="background-color: #eee; display: flex; justify-content: center; margin: 0; font-family: monospace;">
   <div id="container" style="max-width: 1024px; width: 100%;">{{{content}}}</div>
   <script type="text/babel" src="/shared.js"></script>
   <script src="/bundle.js"></script>
